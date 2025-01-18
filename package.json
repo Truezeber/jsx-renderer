@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel files/app.jsx --out-file files/app.js",
-    "start": "npm run build && http-server files"
+    "start": "http-server files",
+    "dev": "nodemon --watch files/app.jsx --exec \"npm run build && npm run start\""
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
     "@babel/plugin-transform-react-jsx": "^7.25.9",
-    "http-server": "^14.1.1"
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9"
   }
 }
