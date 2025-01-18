@@ -13,7 +13,22 @@ function h(nodeName, attributes, ...args) {
     let children = args.length ? [].concat(...args) : null;
     return {nodeName, attributes, children}
 }
-const vdom = <div id="foo">Hey! It's working!</div>
+const items = ['a1', 'a2', 'a3'];
+
+const item = (text) => {
+    return <li>{text}</li>
+}
+
+const vdom = (
+    <div id="foo">
+        <h2>JSX part</h2>
+        Hey! It's working!
+        <p>Look at this cool list:</p>
+        {items.map ((i) => item(i))}
+    </div>
+);
+
+
 const dom = render(vdom);
 
 document.body.appendChild(dom);
