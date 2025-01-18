@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel files/app.jsx --out-file files/app.js",
-    "start": "http-server files",
+    "start": "http-server files -c-1",
     "dev": "nodemon --watch files/app.jsx --exec \"npm run build && npm run start\""
   },
   "keywords": [],
