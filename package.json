@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel files/app.jsx --out-file files/app.js"
+    "build": "babel files/app.jsx --out-file files/app.js",
+    "start": "npm run build && http-server files"
   },
   "keywords": [],
   "author": "",
